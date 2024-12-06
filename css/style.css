@@ -1,0 +1,69 @@
+@font-face {
+  font-family: 'BerzulisPizius';
+  src: url('../font/Berzulis-PIZIUS.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Auth';
+  src: url('../font/authentic-sans-130.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GINTO';
+  src: url('../font/ABCGintoRoundedNordCondensed-Ultra-Trial.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  background-color: #f2ff00;
+  color: #fff;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+#clickButton {
+  font-size:2rem;
+  color: #f2ff00;
+  -webkit-text-stroke: 3px rgb(0, 255, 255);
+  margin-bottom: 20px;
+  border-radius: 5%;
+  font-family: 'GINTO';
+  background-color: rgb(255, 0, 238);
+  border: 5px solid rgb(0, 255, 255);
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+}
+
+.url-display {
+  margin-top: 20px;
+  font-size: 2.5rem;
+}
+
+#urlLink {
+  color: rgb(5, 125, 11);
+  text-decoration: none;
+}
+
+#explosionCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999; 
+}
