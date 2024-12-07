@@ -16,63 +16,94 @@
   font-family: 'GINTO';
   src: url('../font/ABCGintoRoundedNordCondensed-Ultra-Trial.woff2') format('woff');
   font-weight: normal;
-  font-style: italic;
+  font-style: normal;
 }
-
+/* General Styling */
 body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Align vertically */
+  align-items: center;     /* Align horizontally */
+  height: 100vh;           /* Full viewport height */
   margin: 0;
   font-family: Arial, sans-serif;
-  height: 100vh;
   background-color: #f2ff00;
   color: #fff;
   overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* Container Styling */
 .container {
   text-align: center;
   position: relative;
   z-index: 1;
+  top: -10vh; /* Push container slightly above center */
 }
 
+/* Click Button Styling */
 #clickButton {
-  font-size:2rem;
+  font-size: 4vw; /* Responsive font size */
+  padding: 2vw 4vw; /* Responsive padding */
   color: #f2ff00;
-  -webkit-text-stroke: 3px rgb(0, 255, 255);
-  margin-bottom: 20px;
-  border-radius: 5%;
-  text-align: center;
-  font-family: 'GINTO';
+  -webkit-text-stroke: 2px rgb(0, 255, 255);
+  border-radius: 8px;
+  font-family: 'GINTO', sans-serif;
   background-color: rgb(255, 0, 238);
-  border: 5px solid rgb(0, 255, 255);
+  border: 3px solid rgb(0, 255, 255);
+  text-align: center;
   cursor: pointer;
-  z-index: 2;
   position: relative;
+  z-index: 2;
 }
 
+/* URL Display Styling (Center of Page) */
 .url-display {
-  position: absolute; 
-
-  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
   font-family: 'GINTO', sans-serif;
   color: rgb(0, 255, 242);
+  text-align: center;
   z-index: 10;
 }
-#urlLink {
 
-  font-family: 'GINTO', sans-serif;
-  position: relative;
-  top: 30vh; 
-  left: 50%; 
-  transform: translate(-50%, -50%);
-  color: rgb(0, 255, 242);
-  background-color: rgb(255, 0, 238);
-  border: 5px sorgb(0, 238, 255), 255, 255);
+#urlLink {
   text-decoration: underline;
-  text-align: center;
+  background-color: rgb(255, 0, 238);
+  padding: 5px 10px;
+  border: 3px solid rgb(0, 255, 242);
+  color: rgb(0, 255, 242);
+  display: inline-block;
 }
 
+/* Marquee Styling */
+marquee {
+  font-family: 'GINTO', sans-serif;
+  font-size: 2.5vw;
+  color: rgb(255, 0, 238);
+  -webkit-text-stroke: 1px #00e5ff;
+  background-color: green;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+/* Top Marquee */
+#win1 {
+  top: 0;
+}
+
+/* Bottom Marquee */
+#win2 {
+  bottom: 0;
+}
+
+/* Explosion Canvas (Fixed Background Layer) */
 #explosionCanvas {
   position: fixed;
   top: 0;
@@ -80,15 +111,21 @@ body {
   width: 100vw;
   height: 100vh;
   pointer-events: none;
-  z-index: 999; 
+  z-index: 999;
 }
 
-marquee{
-  font-family: 'GINTO',sans-serif;
-  font-size: 2em;
-  color:rgb(255, 0, 238);
-  -webkit-text-stroke: 2px #00e5ff;
-  top
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  #clickButton {
+    font-size: 6vw;
+    padding: 3vw 5vw;
+  }
+
+  .url-display {
+    font-size: 1.2rem;
+  }
+
+  marquee {
+    font-size: 3.5vw;
+  }
 }
-
-

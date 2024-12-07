@@ -7,16 +7,26 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <marquee id="win1"behavior="alternate">WIN WIN WIN WIN WIN WIN WIN WIN</marquee>
+  <!-- Top Marquee -->
+  <marquee id="win1" behavior="alternate">WIN WIN WIN WIN WIN WIN WIN WIN</marquee>
+  
+  <!-- Container for Button -->
   <div class="container">
     <button id="clickButton">!Click and Win!</button>
-    <div id="urlDisplay" class="url-display">
-      <a id="urlLink" href="#" target="_blank"></a>
-    </div>
   </div>
 
+  <!-- URL Display -->
+  <div id="urlDisplay" class="url-display">
+    <a id="urlLink" href="#" target="_blank">Click to Claim!</a>
+  </div>
+
+  <!-- Bottom Marquee -->
+  <marquee id="win2" behavior="alternate">WIN WIN WIN WIN WIN WIN WIN WIN</marquee>
+
+  <!-- Explosion Canvas -->
   <canvas id="explosionCanvas"></canvas>
 
+  <!-- External Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.5.8/browser/pixi.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
