@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
     const urls = [
-      "https://example1.com",
-      "https://example2.com",
-      "https://example3.com",
-      "https://example4.com",
-      "https://example5.com",
-      "https://winner.com" // Final winning URL
+      "https://imberlyk.github.io/QRs/play.html",
+      "https://imberlyk.github.io/QRs/test.html",
+      "https://imberlyk.github.io/Screenshots/",
+      "https://imberlyk.github.io/small/",
+      "https://imberlyk.github.io/copy/",
+      "https://imberlyk.github.io/WORM/" // Final winning URL
     ];
   
     const clickButton = document.getElementById("clickButton");
