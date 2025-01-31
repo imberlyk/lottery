@@ -5,25 +5,25 @@ document.addEventListener("DOMContentLoaded", () => {
       "https://imberlyk.github.io/Screenshots/",
       "https://imberlyk.github.io/small/",
       "https://imberlyk.github.io/copy/",
-      "https://imberlyk.github.io/WORM/" // Final winning URL
+      "https://imberlyk.github.io/WORM/" 
     ];
   
     const clickButton = document.getElementById("clickButton");
     const urlLink = document.getElementById("urlLink");
   
-    // PIXI.js setup on full-screen canvas
+   
     const explosionCanvas = document.getElementById("explosionCanvas");
     const app = new PIXI.Application({
       view: explosionCanvas,
       resizeTo: window,
-      backgroundAlpha: 0, // Transparent background
+      backgroundAlpha: 0, 
       antialias: true
     });
   
     const colors = [0xffd700, 0xff6347, 0x7fffd4, 0xff69b4, 0x00bfff];
   
     clickButton.addEventListener("click", () => {
-      const shuffledUrls = shuffleArray([...urls]); // Randomize the order
+      const shuffledUrls = shuffleArray([...urls]); 
       let urlIndex = 0;
       const maxCycles = Math.floor(Math.random() * 3 + 3);
       let currentCycle = 0;
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 100);
     });
   
-    // Create star explosion effect on full-screen canvas
+   
     function createExplosion() {
       const particles = new PIXI.ParticleContainer(500, {
         position: true,
